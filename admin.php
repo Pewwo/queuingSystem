@@ -1,8 +1,8 @@
 <?php
 
-require 'db.php';
+require 'config/db.php';
 
-require 'auth.php';
+require 'includes/auth.php';
 requireRole(['admin']); // Restrict to admin only
 
 $limit = 10;

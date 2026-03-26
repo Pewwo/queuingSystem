@@ -1,4 +1,4 @@
-<?php require 'auth.php'; ?>
+<?php require 'includes/auth.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +51,7 @@
             <!-- Populated via JS -->
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script>
         startDashboardPolling();
     </script>

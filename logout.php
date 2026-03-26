@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['doctor_id'])) {
-    require 'db.php';
+    require 'config/db.php';
     $did = intval($_SESSION['doctor_id']);
     $conn->query("UPDATE doctors SET current_clinic_id = NULL WHERE id = $did");
 }

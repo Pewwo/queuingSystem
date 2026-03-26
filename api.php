@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require 'config/db.php';
 header('Content-Type: application/json');
 
 $action = $_GET['action'] ?? '';

@@ -1,6 +1,6 @@
 <?php 
-require 'db.php'; 
-require 'auth.php';
+require 'config/db.php'; 
+require 'includes/auth.php';
 requireRole(['admin']);
 ?>
 <!DOCTYPE html>
@@ -78,6 +78,6 @@ requireRole(['admin']);
             } else { echo 'null'; }
         ?>;
     </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

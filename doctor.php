@@ -1,8 +1,8 @@
 <?php
 
-require 'db.php';
+require 'config/db.php';
 
-require 'auth.php';
+require 'includes/auth.php';
 requireRole(['admin', 'doctor']);
 
 $clinic_name = "Your Clinic";
@@ -233,6 +233,6 @@ if (isset($_SESSION['doctor_id'])) {
         const userClinicName = '<?php echo addslashes($clinic_name); ?>';
         const userId = <?php echo $_SESSION['user_id']; ?>;
     </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
