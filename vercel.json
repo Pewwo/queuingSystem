@@ -9,5 +9,7 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ]
+  ],
+  "buildCommand": null,
+  "installCommand": null
 }
