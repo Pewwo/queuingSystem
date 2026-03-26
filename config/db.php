@@ -1,14 +1,26 @@
 <?php
-// Database Credentials for InfinityFree
-$host = 'sql206.infinityfree.com';
-$user = 'if0_41481042';
-$pass = 'YOUR_VPANEL_PASSWORD'; // <-- CHANGE THIS to your password!
-$db   = 'if0_41481042_hospital_queue';
-$port = '3306';
+// Auto-detect environment
+$is_localhost = ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === '127.0.0.1');
+
+if ($is_localhost) {
+    // 🏠 LOCAL DATABASE SETTINGS
+    $host = 'localhost';
+    $user = 'root';
+    $pass = ''; 
+    $db   = 'hospital_queue'; // Your XAMPP/WAMP DB name
+    $port = '3306';
+} else {
+    // 🌐 INFINITYFREE DATABASE SETTINGS
+    $host = 'sql206.infinityfree.com';
+    $user = 'if0_41481042';
+    $pass = 'YOUR_VPANEL_PASSWORD'; // <-- MANUALLY REPLACE THIS BEFORE UPLOAD!
+    $db   = 'if0_41481042_hospital_queue';
+    $port = '3306';
+}
 
 $conn = mysqli_init();
 
-// InfinityFree doesn't usually require SSL for local script connections
+// Connection logic
 $conn->real_connect($host, $user, $pass, $db, $port);
 
 if ($conn->connect_error) {
