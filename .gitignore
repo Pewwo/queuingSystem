@@ -1,0 +1,15 @@
+# Generic PHP ignore
+.env
+composer.lock
+vendor/
+node_modules/
+
+# OS/System files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Project specific
+db_config.local.php
+setup_log.txt
